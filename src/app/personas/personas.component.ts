@@ -7,11 +7,14 @@ import { Component } from "@angular/core";
 })
 export class PersonasComponent{
     disable = false;
-    message = "None person has been added";
+    message = "";
     title = "aver";
+
+    show = false;
 
     addPerson(){
         this.message = "Person added";
+        this.show = true;
     }
 
     // modifyTitle(event: Event){

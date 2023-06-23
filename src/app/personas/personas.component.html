@@ -5,7 +5,9 @@
       <button class="btn btn-primary" 
       [disabled]="disable" 
       (click) = "addPerson()">Add Person</button>
-      <p>{{message}}</p> 
+      <p *ngIf="show; else noPeople">{{message}} with tile {{title}}</p>
+      <ng-template #noPeople></ng-template>
+      <p>No people has been added</p>
       <app-persona></app-persona>
 
       <label>Person Title</label>
