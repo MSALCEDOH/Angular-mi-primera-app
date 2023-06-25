@@ -19,17 +19,17 @@ export class FormularioComponent {
   
    @Output() personaCreada = new EventEmitter<Persona>();
 
-  //  nombreInput:string = "";
-  //  apellidoInput:string = "";
+   nombreInput:string = "";
+   apellidoInput:string = "";
   
-  @ViewChild("nombreInput") nombre: ElementRef;
-  @ViewChild("apellidoInput") apellido: ElementRef;
+  // @ViewChild("nombreInput") nombre: ElementRef;
+  // @ViewChild("apellidoInput") apellido: ElementRef;
 
   agregarPersona(){
     //agregarPersona(nombreInput:HTMLInputElement,apellidoInput:HTMLInputElement){
     // agregarPersona(){  
-  // let persona1 = new Persona(this.nombreInput,this.apellidoInput)
-  let persona1 = new Persona(this.nombre.nativeElement.value,this.apellido.nativeElement.value)
+   let persona1 = new Persona(this.nombreInput,this.apellidoInput)
+  //let persona1 = new Persona(this.nombre.nativeElement.value,this.apellido.nativeElement.value)
   //this.personaCreada.emit(persona1);
   this.personasService.AgregarPersona(persona1);
   //this.logginService.sendMessageConsole("Enviamos persona: " + persona1.nombre);
