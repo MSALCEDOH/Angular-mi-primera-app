@@ -9,19 +9,23 @@ import { Persona } from './persona.model';
 export class AppComponent {
   // title = 'Mi primera App en Angular';
   // saludo = 'Saludos';
-  title = "List of people";
+  // title = "List of people";
   
-  personas: Persona[] = [
-    new Persona('Martin','Salcedo'), 
-    new Persona('Juan','Perez'),
-    new Persona('Gaby','M') 
-  ];
-  nombreInput:string = "";
-  apellidoInput:string = "";
+  // personas: Persona[] = [
+  //   new Persona('Martin','Salcedo'), 
+  //   new Persona('Juan','Perez'),
+  //   new Persona('Gaby','M') 
+  // ];
+  
+  // personaAgregada(persona: Persona){
+  //   this.personas.push(persona);
+  // }
 
-  agregarPersona(){
-    let persona1 = new Persona(this.nombreInput,this.apellidoInput)
-    this.personas.push(persona1);
+  title = "Calculadora";
+  resultadoPadre:number;
+
+  procesarResultado(resultado: number){
+    this.resultadoPadre = resultado;
   }
 
 }

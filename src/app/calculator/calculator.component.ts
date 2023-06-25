@@ -7,11 +7,8 @@ import { Component } from '@angular/core';
 })
 export class CalculatorComponent {
   
-  operando1: number = 0;
-  operando2: number = 0;
-  suma: number = 0;
+
+
   
-  Sum(){
-    this.suma = this.operando1 + this.operando2;
-  }
+
 }
