@@ -1,21 +1,20 @@
-<!-- <div class="container">
+<div class="container">
     <div class="col">
         <h3>
             {{title}}
         </h3>
     </div>
     <hr/>
-    <app-formulario
-    (personaCreada)="personaAgregada($event)"
-    ></app-formulario>
+    <app-formulario></app-formulario>
+    <!-- <app-formulario (personaCreada)="personaAgregada($event)"></app-formulario> -->
 </div>
 <app-persona
 *ngFor="let personaElemento of personas; let i = index"
 [persona] = "personaElemento"
 [indice] = "i"
-></app-persona> -->
+></app-persona>
 
-<div class="container"> 
+<!-- <div class="container"> 
     <h1>{{title}}</h1>
 <app-formulario
 (resultadoSuma)="procesarResultado($event)"
@@ -24,4 +23,4 @@
 [resultadoHijo] = "resultadoPadre"
 >    
 </app-resultado>
-</div>
+</div> -->

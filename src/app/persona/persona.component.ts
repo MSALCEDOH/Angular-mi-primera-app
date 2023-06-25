@@ -1,11 +1,15 @@
-import { Component, Input } from '@angular/core';
+import { Component, Injectable, Input } from '@angular/core';
 import { Persona } from '../persona.model';
+import { PersonasService } from '../personas.service';
 
 @Component({
   selector: 'app-persona',
   templateUrl: './persona.component.html',
   styleUrls: ['./persona.component.css']
 })
+
+@Injectable()
+
 export class PersonaComponent {
 
   @Input() persona: Persona;
@@ -19,5 +23,14 @@ export class PersonaComponent {
     return this.age;
   }
   */
+
+ constructor(private personasService: PersonasService){
+
+ }
+
+  
+  emitirSaludo(){
+    this.personasService.saludar.emit(this.indice)
+  }
 
 }

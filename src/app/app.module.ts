@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { ResultadoComponent } from './resultado/resultado.component';
+import { LogginService } from './LoggingService.service';
+import { PersonasService } from './personas.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,7 @@ import { ResultadoComponent } from './resultado/resultado.component';
   imports: [
     BrowserModule,FormsModule
   ],
-  providers: [],
+  providers: [LogginService,PersonasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
