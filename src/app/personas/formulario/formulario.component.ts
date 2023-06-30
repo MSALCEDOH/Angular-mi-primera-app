@@ -1,7 +1,8 @@
-import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
-import { Persona } from '../persona.model';
-import { LogginService } from '../LoggingService.service';
-import { PersonasService } from '../personas.service';
+import { Component, EventEmitter, Output, OnInit } from '@angular/core';
+import { Persona } from '../../persona.model';
+import { LogginService } from '../../LoggingService.service';
+import { PersonasService } from '../../personas.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario',
@@ -11,7 +12,8 @@ import { PersonasService } from '../personas.service';
 })
 export class FormularioComponent {
 
-  constructor(private logginService: LogginService, private personasService: PersonasService){
+  constructor(private logginService: LogginService, private personasService: PersonasService,
+    private router: Router){
     this.personasService.saludar.subscribe(
       (indice: number) => alert("El indice es " + indice)
     );
@@ -25,7 +27,7 @@ export class FormularioComponent {
   // @ViewChild("nombreInput") nombre: ElementRef;
   // @ViewChild("apellidoInput") apellido: ElementRef;
 
-  agregarPersona(){
+  GuardarPersona(){
     //agregarPersona(nombreInput:HTMLInputElement,apellidoInput:HTMLInputElement){
     // agregarPersona(){  
    let persona1 = new Persona(this.nombreInput,this.apellidoInput)
@@ -33,6 +35,7 @@ export class FormularioComponent {
   //this.personaCreada.emit(persona1);
   this.personasService.AgregarPersona(persona1);
   //this.logginService.sendMessageConsole("Enviamos persona: " + persona1.nombre);
+  this.router.navigate(['personas'])
   }
 
   operando1: number = 0;

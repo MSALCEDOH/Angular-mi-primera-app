@@ -1,10 +1,10 @@
-<form class="item">
+<div class="box">
+<form class="item" #f="ngForm" (ngSubmit)="f.form.valid && GuardarPersona()">
         <!-- <input type="text" name="nombre" id="nombre" placeholder="Nombre" #nombreInput> -->
-        <input type="text" name="nombre" id="nombre" placeholder="Nombre" [(ngModel)] = "nombreInput">
-        <input type="text" name="apellido" id="apellido" placeholder="Apellido" [(ngModel)] = "apellidoInput">
-        <button type="submit" 
-        class="btn btn-primary" 
-        (click)="agregarPersona()">
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre" [(ngModel)] = "nombreInput" required>
+        <input type="text" name="apellido" id="apellido" placeholder="Apellido" [(ngModel)] = "apellidoInput" required>
+        <button type="submit" style="cursor: pointer"
+        (click)="GuardarPersona()">
         +                
         </button>
         <!-- <button type="submit" 
@@ -14,6 +14,7 @@
         </button> -->
 
 </form>
+</div>
 <!-- 
 <form>
     <div class="form-group">

@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div class="row">
     <div class="col">
       <h1>Listado de Personas</h1>
@@ -16,4 +16,20 @@
       {{title}}
     </div>
   </div>
-</div>
+</div> -->
+
+    <!-- <app-formulario (personaCreada)="personaAgregada($event)"></app-formulario> -->
+
+<div style="text-align: center">
+  <button style="cursor: pointer" (click)="agregar()">+</button>
+</div>    
+<div class="box">
+      <app-persona
+      *ngFor="let personaElemento of personas; let i = index"
+      [persona] = "personaElemento"
+      [indice] = "i"
+      ></app-persona>
+  </div>
+  <div class="box">
+  <app-formulario></app-formulario>
+  </div>
