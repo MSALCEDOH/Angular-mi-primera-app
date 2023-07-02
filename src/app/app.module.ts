@@ -11,10 +11,11 @@ import { LogginService } from './LoggingService.service';
 import { PersonasService } from './personas.service';
 import { PersonasComponent } from './personas/personas.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
-    AppComponent, PersonasComponent, PersonaComponent, CalculatorComponent, FormularioComponent, ResultadoComponent
+    AppComponent, PersonasComponent, PersonaComponent, CalculatorComponent, FormularioComponent, ResultadoComponent, ErrorComponent
   ],
   imports: [
     BrowserModule,FormsModule, AppRoutingModule

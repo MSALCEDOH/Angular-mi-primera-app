@@ -22,4 +22,17 @@ export class PersonasService{
         this.personas.push(persona);
         this.loggingService.sendMessageConsole("Agregamos persona " + persona.nombre);
     }
+
+    EncontrarPersona(index:number){
+        let persona: Persona = this.personas[index];
+        return persona;
+    }
+
+    EditarPersona(index: number,persona: Persona){
+        this.personas[index] = new Persona(persona.nombre,persona.apellido);
+    }
+
+    EliminarPersona(index: number){
+        this.personas.splice(index,1);
+    }
 }
