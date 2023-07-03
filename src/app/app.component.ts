@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
  
   // title = 'Mi primera App en Angular';
   // saludo = 'Saludos';
-  // title = "List of people";
+   title = "List of people";
   
   personas: Persona[] = [
     // new Persona('Martin','Salcedo'), 
@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
   //   this.personasServices.AgregarPersona(persona);
   //  }
 
-  title = "Calculadora";
+  //title = "Calculadora";
   resultadoPadre:number;
 
   procesarResultado(resultado: number){

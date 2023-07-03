@@ -14,6 +14,7 @@ export class PersonaComponent {
 
   @Input() persona: Persona;
   @Input() indice: number;
+
   // name: string = 'Martin';
   // lastname: string = 'Salcedo';
   // //private age: number = 28;
