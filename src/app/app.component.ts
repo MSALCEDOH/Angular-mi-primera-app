@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Persona } from './persona.model';
-import { PersonasService } from './personas.service';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth'
 
 @Component({
   selector: 'app-root',
@@ -14,18 +14,14 @@ export class AppComponent implements OnInit {
   // saludo = 'Saludos';
    title = "List of people";
   
-  personas: Persona[] = [
-    // new Persona('Martin','Salcedo'), 
-    // new Persona('Juan','Perez'),
-    //  new Persona('Gaby','M') 
-   ];
-
-   constructor(private personasServices: PersonasService){
-
-   }
+ 
 
    ngOnInit(): void {
-      this.personas = this.personasServices.personas;
+      //this.personas = this.personasServices.personas;
+      firebase.initializeApp({
+        apiKey: "AIzaSyAUGrxQ_V1NswWMU_P5cL6t2CYCasGvpsw",
+        authDomain: "listado-personas-a89a6.firebaseapp.com",
+      });
    }
   
   //  personaAgregada(persona: Persona){

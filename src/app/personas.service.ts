@@ -15,7 +15,7 @@ export class PersonasService{
 
     saludar = new EventEmitter<number>();   
     
-    constructor(private loggingService: LogginService, private dataService: DataService){
+    constructor(private loggingService:LogginService ,private dataService: DataService){
 
     }
 
