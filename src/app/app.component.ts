@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth'
+import { LogginService } from './LoggingService.service';
+import { LoginService } from './login/login.service';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +16,9 @@ export class AppComponent implements OnInit {
   // saludo = 'Saludos';
    title = "List of people";
   
- 
+   constructor(private loginService: LoginService){
+
+   }
 
    ngOnInit(): void {
       //this.personas = this.personasServices.personas;
@@ -30,10 +34,18 @@ export class AppComponent implements OnInit {
   //  }
 
   //title = "Calculadora";
-  resultadoPadre:number;
+  // resultadoPadre:number;
 
-  procesarResultado(resultado: number){
-    this.resultadoPadre = resultado;
+  // procesarResultado(resultado: number){
+  //   this.resultadoPadre = resultado;
+  // }
+
+  Salir(){
+    this.loginService.LogOut();
+  }
+
+  isAutenticado(){
+    return this.loginService.isAutenticado();
   }
 
 }

@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './login/login.service';
 import { LogginService } from './LoggingService.service';
+import { LoginGuardian } from './login/login-guardian.service';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { LogginService } from './LoggingService.service';
   imports: [
     BrowserModule,FormsModule, AppRoutingModule, HttpClientModule
   ],
-  providers: [PersonasService,DataService,LoginService,LogginService],
+  providers: [PersonasService,DataService,LoginService,LogginService, LoginGuardian],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
